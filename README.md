@@ -25,17 +25,14 @@ moving on.
 > table-structure parse.
 
 **After (elibme):**
-> The 82% joint-count finding was measured against 62 notes — but a more careful earlier count
-> (DECISIONS #58, done by directly reading each Word document's table structure rather than
-> asking a model to classify it) puts the true number of RA notes at 64. The 62 came from the
-> model's own guess during this week's sweep, which also produced a 9-note "not sure" bucket
-> that shouldn't exist if the classification were perfect. So the joint-count percentage was
-> computed over a slightly wrong group size, and should be re-run against the confirmed 64
-> before it's cited formally.
+> The joint-count finding used 62 notes as its denominator (the group size a rate is measured
+> against) — but DECISIONS #58 confirms 64. The two totals track different-sized groups: 62 is
+> the model's own guess, 64 is a hand-verified, ground-truth count.
 
-Same information, same numbers, no analogy — the only change is naming what a "cohort" and a
-"ground-truth count" are, once, in plain terms, instead of assuming the reader already tracks
-that vocabulary.
+Same information, same numbers, no analogy, no new facts — the only change is naming what
+"denominator" and "ground-truth" mean, once, in plain clauses, instead of assuming the reader
+already tracks that vocabulary. It runs under half again as long as the dense version, not four
+times longer — this skill's job is translation, not elaboration.
 
 ## Install
 

@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "elibme",
   "displayName": "elibme",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Calibrate an explanation to a Biomedical Engineer reader: full density on tech/AI/infra, plain first-use definitions on clinical and research-methodology terms, no cross-domain analogies.",
   "author": {
     "name": "troopdegen",

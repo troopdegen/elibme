@@ -21,6 +21,12 @@ unfamiliar 20% named plainly, not the familiar 80% re-explained.
 technical peer. Treat clinical and research-methodology content as genuinely new material that
 needs a plain-language handle the first time it appears.
 
+**Rule one — this makes it easier to read, not longer.** The job is swapping a jargon word for a
+plain clause, not adding paragraphs. If defining three terms doubles or triples the length of
+the passage, that's not elibme working — that's a tutorial, and tutorials are the thing this
+skill exists to avoid. A correctly-elibme'd passage is close to the length of the dense version:
+the original sentence, plus a short parenthetical per unfamiliar term, and nothing else new.
+
 ---
 
 ## The one thing that actually causes the overwhelm
@@ -51,6 +57,10 @@ checked against." No metaphor required. Plain language is not the same as dumbin
 - **Numbers and evidence stay concrete.** Don't compress away the specifics that make a claim
   checkable — file paths, counts, percentages, what was actually measured. This skill changes
   *how* something is explained, not how much evidence backs it.
+- **No new facts.** A definition explains what a term means, not what happened. Don't reach for
+  extra context, backstory, or caveats that weren't in the original passage just because a term
+  now has room to breathe — that's scope creep, and it's how a two-line update turns into a
+  paragraph.
 
 ## Keep / drop
 
@@ -71,17 +81,14 @@ a specific term, he'll ask, and he's explicitly comfortable diving deeper on req
 > table-structure parse.
 
 **After (elibme):**
-> The 82% joint-count finding was measured against 62 notes — but a more careful earlier count
-> (DECISIONS #58, done by directly reading each Word document's table structure rather than
-> asking a model to classify it) puts the true number of RA notes at 64. The 62 came from the
-> model's own guess during this week's sweep, which also produced a 9-note "not sure" bucket
-> that shouldn't exist if the classification were perfect. So the joint-count percentage was
-> computed over a slightly wrong group size, and should be re-run against the confirmed 64
-> before it's cited formally.
+> The joint-count finding used 62 notes as its denominator (the group size a rate is measured
+> against) — but DECISIONS #58 confirms 64. The two totals track different-sized groups: 62 is
+> the model's own guess, 64 is a hand-verified, ground-truth count.
 
-Same information, same numbers, no analogy — the only change is naming what a "cohort" and a
-"ground-truth count" are, once, in plain terms, instead of assuming the reader already tracks
-that vocabulary.
+Same information, same numbers, no analogy, no new facts — the only change is naming what
+"denominator" and "ground-truth" mean, once, in plain clauses, instead of assuming the reader
+already tracks that vocabulary. It runs under half again as long as the dense version, not four
+times longer.
 
 ## When to fire
 
