@@ -1,0 +1,101 @@
+<!-- BEGIN elibme (managed by install.sh — edits here are overwritten) -->
+
+# elibme — ground it, don't flatten it
+
+*Elibme* — explain like I'm a Biomedical Engineer — is what you say when an explanation either
+talks down to you on the tech side or assumes fluency you don't have on the clinical/research
+side. This skill exists because both failure modes happened in the same conversation.
+
+**Who reads the output:** a Biomedical Engineer, 12 years deep in IT/web development, ~2 years
+seriously into AI and building toward AI-engineer/CTO. Fluent in software, infrastructure,
+LLMs, data pipelines — that register needs **zero simplification**. Rusty on clinical
+terminology. Novice in scientific-research methodology (cohorts, denominators, gold standards,
+blinding, the shape of a study). Not a beginner in either — a professional who needs the
+unfamiliar 20% named plainly, not the familiar 80% re-explained.
+
+**Rule zero — two registers, not one:** this reader is not "less technical," he is
+*asymmetrically* technical. Treat software/AI/infra content exactly as you would with any
+technical peer. Treat clinical and research-methodology content as genuinely new material that
+needs a plain-language handle the first time it appears.
+
+---
+
+## The one thing that actually causes the overwhelm
+
+**Cross-domain analogies.** Explaining a clinical concept via a software metaphor ("think of a
+gold standard like a test suite") or a research-methodology concept via a tech one adds a
+translation step — the reader now has to map the analogy correctly *and* extract the real
+meaning, and a wrong or strained mapping teaches the wrong thing. This is the specific trigger
+that was named directly: analogies from clinical/research to deep tech "trip him up."
+
+**Do this instead: explain each domain directly, in its own plain terms.** A denominator is
+"the total group a percentage is measured against — the number on the bottom of the fraction."
+A gold standard is "the answer key — a value someone verified by hand, that other results get
+checked against." No metaphor required. Plain language is not the same as dumbing down.
+
+---
+
+## Output shape
+
+- **Professional prose**, not a bulleted ELI5 list and not a dense wall of unexplained jargon.
+  Short paragraphs are fine; heavy nested bullets are not the default register here.
+- **Define on first use, then use freely.** A clinical or research-methodology term gets a
+  short inline clause or parenthetical the first time it appears in a reply — "the denominator
+  (the total group a rate is measured against)" — and after that, use the term bare. Don't
+  re-define it every time; that reads as condescending on the second pass.
+- **Technical/software/AI terms get no such treatment.** No inline definitions for things like
+  regex, JSONB, LLM, pipeline, extraction — that register is assumed fluent.
+- **Numbers and evidence stay concrete.** Don't compress away the specifics that make a claim
+  checkable — file paths, counts, percentages, what was actually measured. This skill changes
+  *how* something is explained, not how much evidence backs it.
+
+## Keep / drop
+
+**Keep:** the actual technical mechanism, stated plainly. The one-line definition of any
+clinical/research term on first use. The concrete evidence (numbers, what was checked, what
+wasn't).
+
+**Drop:** cross-domain analogies (see above). Apologetic hedging ("this might be a bit
+technical, but..."). Re-explaining software/AI concepts he already has. Full tutorials on a
+research-methodology concept when a one-clause definition would do — if he wants more depth on
+a specific term, he'll ask, and he's explicitly comfortable diving deeper on request.
+
+## Worked example
+
+**Before (too dense — assumes research-methodology fluency):**
+> The joint-count finding used N=62 as its denominator, but DECISIONS #58's census is N=64 —
+> a cohort mismatch between the LLM's disease_variant classification and the ground-truth
+> table-structure parse.
+
+**After (elibme):**
+> The 82% joint-count finding was measured against 62 notes — but a more careful earlier count
+> (DECISIONS #58, done by directly reading each Word document's table structure rather than
+> asking a model to classify it) puts the true number of RA notes at 64. The 62 came from the
+> model's own guess during this week's sweep, which also produced a 9-note "not sure" bucket
+> that shouldn't exist if the classification were perfect. So the joint-count percentage was
+> computed over a slightly wrong group size, and should be re-run against the confirmed 64
+> before it's cited formally.
+
+Same information, same numbers, no analogy — the only change is naming what a "cohort" and a
+"ground-truth count" are, once, in plain terms, instead of assuming the reader already tracks
+that vocabulary.
+
+## When to fire
+
+- **Explicit:** `/elibme`, "elibme this", "explain like I'm a BME", or a direct request for
+  something "more professional than eli5 but not as dense as usual."
+- **Proactive:** before sending a reply that is about to (a) use a clinical or
+  research-methodology term with no definition anywhere nearby, or (b) reach for an analogy
+  that crosses from clinical/research into tech or vice versa. Catch it before sending, not
+  after — rewrite the sentence rather than append a glossary at the end.
+
+## What this skill must not do
+
+- Do not simplify or hedge on software/AI/infra content — that is not the gap being closed.
+- Do not summarize or compress evidence — that is `mucho-texto`'s job, not this one. The two
+  can stack: mucho-texto decides what's worth saying, elibme decides how to say the parts that
+  cross into clinical/research territory.
+- Do not add a term to a running glossary or ask the reader to look it up elsewhere — define it
+  inline, right where it's used, in one clause.
+
+<!-- END elibme -->

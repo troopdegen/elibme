@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "elibme",
+  "description": "A one-plugin marketplace for the elibme skill.",
+  "owner": {
+    "name": "troopdegen",
+    "url": "https://github.com/troopdegen"
+  },
+  "plugins": [
+    {
+      "name": "elibme",
+      "source": "./",
+      "description": "Calibrate an explanation to a Biomedical Engineer reader: full density on tech/AI/infra, plain first-use definitions on clinical and research-methodology terms, no cross-domain analogies.",
+      "category": "productivity",
+      "tags": ["explanation", "biomedical", "clinical", "research-methodology"]
+    }
+  ]
+}
