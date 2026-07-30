@@ -21,26 +21,42 @@ unfamiliar 20% named plainly, not the familiar 80% re-explained.
 technical peer. Treat clinical and research-methodology content as genuinely new material that
 needs a plain-language handle the first time it appears.
 
-**Rule one — this makes it easier to read, not longer.** The job is swapping a jargon word for a
-plain clause, not adding paragraphs. If defining three terms doubles or triples the length of
-the passage, that's not elibme working — that's a tutorial, and tutorials are the thing this
-skill exists to avoid. A correctly-elibme'd passage is close to the length of the dense version:
-the original sentence, plus a short parenthetical per unfamiliar term, and nothing else new.
+**Rule one — substitute before you annotate.** "Define on first use" is not the goal, it's a
+fallback. A defined term still costs the reader something — a new word to hold onto — even at
+one clause. Before writing "X (which means Y)", ask whether X itself needs to survive the
+sentence. If the reader only needs the fact, drop the jargon and just say Y — "measured against
+62 notes," not "the denominator, meaning the group it's measured against, was 62 notes." Keep
+the term, with a first-use clause, only when he'll need to recognize the *word* later — because
+it reappears in a document, a decision log, or the rest of this conversation.
+
+**Rule two — one clarification per sentence.** Stacking a parenthetical onto a parenthetical, or
+bolting an em-dash clause onto an already-qualified sentence, raises how hard a sentence is to
+parse independent of its word count — the reader has to hold two half-finished thoughts open at
+once. If a passage needs to clarify two things, that's two short sentences, not one sentence
+carrying two definitions. Split, don't nest.
 
 ---
 
-## The one thing that actually causes the overwhelm
+## The three things that cause overwhelm
 
-**Cross-domain analogies.** Explaining a clinical concept via a software metaphor ("think of a
+**1. Cross-domain analogies.** Explaining a clinical concept via a software metaphor ("think of a
 gold standard like a test suite") or a research-methodology concept via a tech one adds a
 translation step — the reader now has to map the analogy correctly *and* extract the real
 meaning, and a wrong or strained mapping teaches the wrong thing. This is the specific trigger
-that was named directly: analogies from clinical/research to deep tech "trip him up."
+that was named directly: analogies from clinical/research to deep tech "trip him up." Fix:
+explain each domain directly, in its own plain terms — no metaphor required.
 
-**Do this instead: explain each domain directly, in its own plain terms.** A denominator is
-"the total group a percentage is measured against — the number on the bottom of the fraction."
-A gold standard is "the answer key — a value someone verified by hand, that other results get
-checked against." No metaphor required. Plain language is not the same as dumbing down.
+**2. Dragging jargon along just to define it.** Keeping "denominator" in the sentence and then
+appending its meaning is two units of information where one would do, every time the word itself
+doesn't need to persist. This is what made the first published version of this skill produce
+explanations that read as *harder*, not easier — every term got the define-in-place treatment
+whether or not the reader needed the word again. Fix: Rule one, above — say the plain meaning and
+move on unless the term has to survive the sentence.
+
+**3. Clause-stacking.** Chaining a definition, an em-dash aside, and a qualifying clause into one
+sentence produces something that is barely longer in words but meaningfully harder to read,
+because the reader can't resolve any of it until the sentence ends. Fix: Rule two, above — one
+clarification per sentence, and split rather than nest when a passage needs more than one.
 
 ---
 
@@ -48,10 +64,13 @@ checked against." No metaphor required. Plain language is not the same as dumbin
 
 - **Professional prose**, not a bulleted ELI5 list and not a dense wall of unexplained jargon.
   Short paragraphs are fine; heavy nested bullets are not the default register here.
-- **Define on first use, then use freely.** A clinical or research-methodology term gets a
-  short inline clause or parenthetical the first time it appears in a reply — "the denominator
-  (the total group a rate is measured against)" — and after that, use the term bare. Don't
-  re-define it every time; that reads as condescending on the second pass.
+- **Substitute by default; annotate only when the word must survive.** For a term used once,
+  just state its plain meaning and skip the jargon entirely. Reach for "X (meaning Y)" only when
+  X itself needs to stick — it's about to recur in this reply, or in something he'll read or
+  write next. That's the one case "define on first use, then use freely" applies to.
+- **One clarification per sentence.** If a passage needs to ground two terms, or a term plus a
+  caveat, that's two sentences. Never stack a parenthetical and an em-dash aside in the same
+  sentence — split the sentence instead of nesting the clauses.
 - **Technical/software/AI terms get no such treatment.** No inline definitions for things like
   regex, JSONB, LLM, pipeline, extraction — that register is assumed fluent.
 - **Numbers and evidence stay concrete.** Don't compress away the specifics that make a claim
@@ -64,14 +83,16 @@ checked against." No metaphor required. Plain language is not the same as dumbin
 
 ## Keep / drop
 
-**Keep:** the actual technical mechanism, stated plainly. The one-line definition of any
-clinical/research term on first use. The concrete evidence (numbers, what was checked, what
-wasn't).
+**Keep:** the actual technical mechanism, stated plainly. A term's plain meaning, worked into the
+sentence. The one-line definition of a clinical/research term that will recur, on its first use.
+The concrete evidence (numbers, what was checked, what wasn't).
 
-**Drop:** cross-domain analogies (see above). Apologetic hedging ("this might be a bit
-technical, but..."). Re-explaining software/AI concepts he already has. Full tutorials on a
-research-methodology concept when a one-clause definition would do — if he wants more depth on
-a specific term, he'll ask, and he's explicitly comfortable diving deeper on request.
+**Drop:** cross-domain analogies (see above). A jargon term kept around just to be defined, when
+saying its plain meaning would do instead. Two clarifications stacked into one sentence.
+Apologetic hedging ("this might be a bit technical, but..."). Re-explaining software/AI concepts
+he already has. Full tutorials on a research-methodology concept when a one-clause definition
+would do — if he wants more depth on a specific term, he'll ask, and he's explicitly comfortable
+diving deeper on request.
 
 ## Worked example
 
@@ -82,13 +103,13 @@ a specific term, he'll ask, and he's explicitly comfortable diving deeper on req
 
 **After (elibme):**
 > The joint-count finding used 62 notes as its denominator (the group size a rate is measured
-> against) — but DECISIONS #58 confirms 64. The two totals track different-sized groups: 62 is
-> the model's own guess, 64 is a hand-verified, ground-truth count.
+> against). DECISIONS #58's confirmed count is different: 64, from a hand-verified table read —
+> not the model's own guess.
 
-Same information, same numbers, no analogy, no new facts — the only change is naming what
-"denominator" and "ground-truth" mean, once, in plain clauses, instead of assuming the reader
-already tracks that vocabulary. It runs under half again as long as the dense version, not four
-times longer.
+"Denominator" gets kept and defined, because it's the kind of term that will recur across a
+whole report of counts and rates. "Ground-truth" gets dropped — "hand-verified" says the same
+thing without asking the reader to learn a new word for a fact used exactly once. And the two
+clarifications land in two sentences, not stacked into one.
 
 ## When to fire
 
@@ -107,3 +128,5 @@ times longer.
   cross into clinical/research territory.
 - Do not add a term to a running glossary or ask the reader to look it up elsewhere — define it
   inline, right where it's used, in one clause.
+- Do not keep a jargon term in the sentence just so it can be defined — if the word itself
+  doesn't need to survive, say what it means and drop it.

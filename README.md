@@ -26,13 +26,15 @@ moving on.
 
 **After (elibme):**
 > The joint-count finding used 62 notes as its denominator (the group size a rate is measured
-> against) — but DECISIONS #58 confirms 64. The two totals track different-sized groups: 62 is
-> the model's own guess, 64 is a hand-verified, ground-truth count.
+> against). DECISIONS #58's confirmed count is different: 64, from a hand-verified table read —
+> not the model's own guess.
 
-Same information, same numbers, no analogy, no new facts — the only change is naming what
-"denominator" and "ground-truth" mean, once, in plain clauses, instead of assuming the reader
-already tracks that vocabulary. It runs under half again as long as the dense version, not four
-times longer — this skill's job is translation, not elaboration.
+"Denominator" gets kept and defined, because it's the kind of term that recurs across a whole
+report of counts and rates. "Ground-truth" gets dropped — "hand-verified" says the same thing
+without asking the reader to learn a new word for a fact used exactly once. And the two
+clarifications land in two sentences, not stacked into one. That's the actual mechanism: keep a
+term only when the word itself needs to survive, and never clarify more than one thing per
+sentence.
 
 ## Install
 

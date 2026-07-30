@@ -4,6 +4,24 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] — 2026-07-30
+
+### Changed
+- v1.1.0 only fixed the illustration — the skill's actual instruction was still additive-only
+  ("define every term on first use"), which is what produced bloated output in the first place.
+  This release changes the mechanism, not just the example:
+- **Rule one — substitute before you annotate.** Defining a term in place is now the fallback,
+  not the default. If a clinical/research term is used once and the reader only needs the fact,
+  say its plain meaning and drop the jargon word entirely. Keep the term, with a first-use
+  clause, only when the reader needs to recognize the *word* again later.
+- **Rule two — one clarification per sentence.** Stacking a parenthetical and an em-dash aside
+  in the same sentence is banned outright — it raises parse difficulty independent of word
+  count. Two things to clarify means two sentences, not one sentence carrying both.
+- `Output shape` and `Keep / drop` updated to state both rules as concrete dos/don'ts.
+  `What this skill must not do` gained a matching bullet.
+- Worked example updated to demonstrate both mechanisms directly: one term substituted away
+  entirely, one term kept and defined, split across two sentences instead of stacked into one.
+
 ## [1.1.0] — 2026-07-30
 
 ### Fixed
@@ -33,5 +51,6 @@ First public release.
 - CI: manifest validation, SKILL.md frontmatter checks, shellcheck, an install/uninstall
   round-trip across every target, and a gate that fails if `dist/` drifts from `SKILL.md`.
 
+[1.2.0]: https://github.com/troopdegen/elibme/releases/tag/v1.2.0
 [1.1.0]: https://github.com/troopdegen/elibme/releases/tag/v1.1.0
 [1.0.0]: https://github.com/troopdegen/elibme/releases/tag/v1.0.0
